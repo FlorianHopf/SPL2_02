@@ -1,7 +1,10 @@
-for i in range(1, 1001):
-	for j in range(2, 1001):
-		if(i%j > 0 and i != j):
-			False
+prime = False
+for i in range(2, 1001):
+	for j in range(2, i):
+		if((i%j == 0) and (i != j)):
+			prime = False
+			break
 		else:
-			break			
-	print(i)
+			prime = True
+	if(prime):
+		print(i)
